@@ -28,7 +28,12 @@ public class FindBy {
     public void shouldFindByName() {
         driver.get("https://hotel-testlab.coderslab.pl/en/");
         WebElement hotelLocationInput = driver.findElement(By.name("hotel_location"));
-        // todo finish
+        WebElement searchNowButton = driver.findElement(By.name("search_room_submit"));
+        WebElement EnterEmail = driver.findElement(By.name("email"));
+        WebElement subsribeButton = driver.findElement(By.name("submitNewsletter"));
+        hotelLocationInput.sendKeys("Warsaw");
+        EnterEmail.sendKeys("test@test.com");
+        searchNowButton.submit();
     }
 
     @Test
