@@ -15,8 +15,6 @@ public class zad3 {
         driver.navigate().back();
         driver.navigate().forward();
         driver.navigate().refresh();
-
-
     }
 
 }

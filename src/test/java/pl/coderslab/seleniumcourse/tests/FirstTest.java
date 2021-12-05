@@ -1,4 +1,4 @@
-package pl.coderslab.seleniumcourse;
+package pl.coderslab.seleniumcourse.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
