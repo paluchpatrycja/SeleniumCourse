@@ -10,20 +10,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class NewAddressTest {
     WebDriver driver;
 
-    @Test
-    public void shouldLogIn() {
-        driver.get("https://mystore-testlab.coderslab.pl");
-
-        SignIn signIn = new SignIn(driver);
-        signIn.clickSignIn();
-        signIn.fillLogInForm();
-    }
-
     @BeforeEach
     public void beforeEach() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
         this.driver = new ChromeDriver();
     }
 
+    @Test
+    public void shouldLogIn() {
+        driver.get("https://mystore-testlab.coderslab.pl");
+        SignIn signIn = new SignIn(driver);
+        signIn.clickSignIn();
+        signIn.fillLogInForm();
+    }
+
+    @Test
+    public void shouldCreateAddress() {
+        this.shouldLogIn();
+        CreateNewAddress newAddress = new CreateNewAddress(driver);
+        newAddress.clickAddresses();
+        newAddress.clickCreateNewAddress();
+
+    }
 
 }
