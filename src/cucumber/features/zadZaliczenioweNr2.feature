@@ -9,9 +9,9 @@ Feature: Buying a product in PrestaShop
    Then User can proceed to checkout
    And Confirm address
    And Select delivery method: <deliveryMethod>
-   And Select payment method: <paymentMethod>
+   And Select payment method: Pay by Check
    Then Can place an order
    And Take a screenshot for confirmation
    Examples:
-   |productName                |productSize|quantity|deliveryMethod|paymentMethod|
-   |Hummingbird Printed Sweater|M          |5       |PrestaShop    |             |
+   |productName                |productSize|quantity|deliveryMethod|
+   |Hummingbird Printed Sweater|M          |5       |PrestaShop    |
